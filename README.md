@@ -25,30 +25,3 @@ Additionally, ensure that the `nobel-laureates.json` file is stored in `/home/cs
 
 Then go to [http://localhost:8888/laureate.php](http://localhost:8888/laureate.php) on your local machine to view the JSON output from the API.
 
-## Pretext
-
-The JSON schema that will be converted to relational table format is as follows:
-```
-"laureates": {
-    "id", "givenName", "familyName", "gender",
-    "birth: {
-        "date",
-        "place": {
-            "city", "country"
-        }
-    },
-    "orgName",
-    "founded": {
-        "date",
-        "place": {
-            "city", "country"
-        }
-    },
-    "nobelPrizes": [{
-        "awardYear", "category", "sortOrder", 
-        "affiliations": [{
-            "name", "city", "country"
-        }]
-    }]
-}
-```
